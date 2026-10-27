@@ -178,15 +178,15 @@ Défi : Le code 418 « I’m a teapot » (« Je suis une théière ») est une b
 
 1. Quelle est la différence entre une page HTML et une réponse JSON ? À qui chacune est-elle destinée ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Une page HTML contient du contenu mis en forme avec des balises : elle est destinée à un humain. Une réponse JSON contient seulement des données brutes, organisées sous forme de paires "clé": valeur sans mise en forme : elle est destinée à un programme.
 
 2. Dans la page `/horloge`, quel code s'exécute sur le **serveur** et quel code s'exécute dans le **navigateur** ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Sur le serveur, c’est le code Python de flask_app.py qui s’exécute : la route /horloge envoie la page HTML, et la route /api/heure calcule l’heure et la renvoie en JSON. Dans le navigateur, c’est le code JavaScript (dans la balise <script> de la page) qui s’exécute : il appelle régulièrement /api/heure avec fetch(), lit le JSON reçu, puis met à jour l’heure affichée sans recharger toute la page. 
 
 3. Citez une application de votre téléphone qui, selon vous, utilise une API. Quelles données échange-t-elle ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ L’application Météo : elle envoie ma position (ou le nom de ma ville) à l’API d’un service météo, qui lui renvoie en JSON la température, le ciel prévu, le vent et les prévisions des prochains jours. L’application affiche ensuite ces données avec ses propres icônes et sa mise en page. 
 
 ---
 
@@ -194,4 +194,4 @@ Défi : Le code 418 « I’m a teapot » (« Je suis une théière ») est une b
 
 En quelques phrases, expliquez à un ami ce qui se passe entre le moment où il tape une adresse dans son navigateur et celui où la page s'affiche :
 
-> _Ma réponse :_ 
+> _Ma réponse :_ Quand tu tapes une adresse (par exemple https://davidson.pythonanywhere.com/presentation), ton navigateur trouve d’abord l’adresse IP du serveur qui correspond au nom de domaine. Il lui envoie ensuite une requête HTTP du genre « donne-moi la page /presentation », avec au passage quelques infos sur toi. Le serveur reçoit cette requête, exécute son code, remplit le template HTML avec les bonnes données, puis renvoie une réponse : un code de statut (200 si tout va bien, 404 si la page n’existe pas, 500 si le serveur plante) et le contenu (en général du HTML). Ton navigateur lit ce HTML et, s’il y voit d’autres fichiers, il envoie une nouvelle requête pour chacun. Enfin, il assemble le tout et affiche la page mise en forme.
