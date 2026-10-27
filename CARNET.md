@@ -110,16 +110,15 @@ Bonus : Pour presentation, le Content-Type vaut text/html; charset=utf-8. Pour s
 
 1. Dans l'URL `https://www.youtube.com/results?search_query=chat`, quel est le nom du paramètre ? Quelle est sa valeur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le paramètre s’appelle search_query et sa valeur est chat.
 
 2. Pourquoi le serveur plante-t-il avec `a=bonjour` ? Que faudrait-il faire pour l'éviter ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le code Python essaie de transformer la valeur de a en nombre avec int(). Or "bonjour" n’est pas un nombre, donc Python lève une erreur , qui n’est pas gérée. Le serveur renvoie alors une erreur 500 (Internal Server Error). Pour l’éviter, il faut vérifier les données reçues avant de les utiliser : par exemple avec un try / except ValueError, ou en testant si la valeur est bien un nombre (.isdigit()). En cas de problème, on renvoie un message clair, comme « Veuillez entrer un nombre », au lieu de planter.
 
 3. Pourquoi est-il dangereux d'afficher **tel quel** ce que l'utilisateur envoie ?
 
-   > _Ma réponse :_ 
-
+   > _Ma réponse :_ Parce que l’utilisateur peut écrire n’importe quoi dans l’URL, y compris du code HTML ou JavaScript (par exemple <script>alert('piraté')</script>). Si le serveur le renvoie tel quel dans la page, le navigateur l’exécute comme s’il faisait partie du site. 
 ---
 
 ## 🟣 Exercice 8 — Les formulaires
