@@ -8,7 +8,7 @@
 #  Les consignes sont dans le dossier "exercices/".
 # ---------------------------------------------------------------
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, abort
 
 app = Flask(__name__)
 
