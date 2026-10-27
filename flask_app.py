@@ -25,10 +25,19 @@ def accueil():
 #  Ajoutez vos nouvelles routes ci-dessous 👇
 # ---------------------------------------------------------------
 
+
 @app.get("/presentation")
 def presentation():
-    return "Je m'appelle David et je suis étudiant en informatique."
-
+    return """
+    <h1>David Kouakou</h1>
+    <p>Je suis étudiant en <strong>deuxième année d'informatique</strong>.</p>
+    <h2>Ce que j'aime</h2>
+    <ul>
+        <li>Les jeux vidéo</li>
+        <li>Le sport</li>
+        <li>Le code (bientôt !)</li>
+    </ul>
+    """
 
 @app.get("/loisirs")
 def loisirs():
