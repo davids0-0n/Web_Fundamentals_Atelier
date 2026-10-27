@@ -31,6 +31,7 @@ def presentation():
     return """
     <h1>David Kouakou</h1>
     <p>Je suis étudiant en <strong>deuxième année d'informatique</strong>.</p>
+    <img src="https://i0.wp.com/longreads.com/wp-content/uploads/2024/03/Hacking-RL-final.jpg?fit=2400%2C1400&ssl=1" width="100">
     <h2>Ce que j'aime</h2>
     <ul>
         <li>Les jeux vidéo</li>
