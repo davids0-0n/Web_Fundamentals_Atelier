@@ -103,7 +103,7 @@
 
    > _Ma réponse :_ Parce qu’elles modifient seulement la copie de la page chargée dans mon navigateur, sur mon ordinateur. Elles ne changent pas les fichiers sur le serveur. Les autres visiteurs reçoivent toujours la page envoyée par le serveur, et si je recharge la page, mes modifications disparaissent aussi. Pour modifier vraiment le site, il faut changer le code sur GitHub et le redéployer.
 
-Bonus : Pour presentation, le Content-Type vaut text/html; charset=utf-8. Pour style.css, il vaut text/css; charset=utf-8. Cet en-tête, envoyé par le serveur, indique au navigateur le type de fichier qu’il reçoit, pour qu’il sache comment le traiter : le HTML est affiché comme une page, le CSS est appliqué comme style. Le navigateur se fie à cet en-tête plutôt qu’à l’extension du fichier. La partie charset=utf-8 précise l’encodage des caractères, ce qui permet d’afficher correctement les accents (é, è, à…).
+Défi : Pour presentation, le Content-Type vaut text/html; charset=utf-8. Pour style.css, il vaut text/css; charset=utf-8. Cet en-tête, envoyé par le serveur, indique au navigateur le type de fichier qu’il reçoit, pour qu’il sache comment le traiter : le HTML est affiché comme une page, le CSS est appliqué comme style. Le navigateur se fie à cet en-tête plutôt qu’à l’extension du fichier. La partie charset=utf-8 précise l’encodage des caractères, ce qui permet d’afficher correctement les accents (é, è, à…).
 ---
 
 ## 🟣 Exercice 7 — Envoyer des informations dans l'URL
@@ -151,6 +151,7 @@ Bonus : Pour presentation, le Content-Type vaut text/html; charset=utf-8. Pour s
 
    > _Ma réponse :_ Quand on tape http:// au lieu de https://, le site redirige automatiquement vers la version sécurisée en HTTPS. Autre exemple : quand on essaie d’ouvrir une page qui demande d’être connecté (comme sa boîte Gmail), le site redirige vers la page de connexion, puis, une fois connecté, redirige vers la page demandée au départ.
 
+Défi : Le code 418 « I’m a teapot » (« Je suis une théière ») est une blague de l’IETF. Il vient d’un RFC publié le 1ᵉʳ avril 1998 (RFC 2324), qui décrit un faux protocole pour piloter des cafetières via Internet (HTCPCP). Un serveur qui est une théière doit répondre 418 si on lui demande de faire du café. Ce n’est pas un vrai code utilisé en pratique, mais beaucoup de sites et de logiciels l’ont gardé comme clin d’œil (par exemple google.com/teapot).
 ---
 
 ## 🔴 Exercice 10 — Ce que le serveur sait de vous
