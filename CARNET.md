@@ -141,15 +141,15 @@ Bonus : Pour presentation, le Content-Type vaut text/html; charset=utf-8. Pour s
 
 1. Quelle est la différence entre une erreur `4xx` et une erreur `5xx` ? Qui est « fautif » dans chaque cas ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Les codes 4xx sont des erreurs du client donc c'est lui le fautif. Les codes 5xx sont des erreurs du serveur donc c'est lui le fautif.
 
 2. Comment fonctionne une redirection ? Qui fait la deuxième requête : le serveur ou le navigateur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le serveur ne renvoie pas de page, mais un code 3xx avec un en-tête Location qui contient la nouvelle adresse. C’est le navigateur qui lit cet en-tête et envoie automatiquement une deuxième requête vers cette nouvelle adresse. 
 
 3. Donnez un exemple de situation où un vrai site utilise une redirection.
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Quand on tape http:// au lieu de https://, le site redirige automatiquement vers la version sécurisée en HTTPS. Autre exemple : quand on essaie d’ouvrir une page qui demande d’être connecté (comme sa boîte Gmail), le site redirige vers la page de connexion, puis, une fois connecté, redirige vers la page demandée au départ.
 
 ---
 
