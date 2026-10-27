@@ -74,13 +74,20 @@ def formulaire():
 @app.route("/salut", methods=["GET", "POST"])
 def salut():
     if request.method == "POST":
-        prenom = request.form.get("prenom", "inconnu")
-        ville = request.form.get("ville", "nulle part")
+        donnees = request.form
     else:
-        prenom = request.args.get("prenom", "inconnu")
-        ville = request.args.get("ville", "nulle part")
-    return f"Bonjour {prenom}, qui vient de {ville} ! (reçu en {request.method})"
+        donnees = request.args
 
+    prenom = donnees.get("prenom", "inconnu")
+    ville = donnees.get("ville", "nulle part")
+    couleur = donnees.get("couleur", "black")
+
+    # On n'accepte que les couleurs prévues (sécurité)
+    if couleur not in ["tomato", "teal", "royalblue"]:
+        couleur = "black"
+
+    return render_template("salut.html", prenom=prenom, ville=ville,
+                           couleur=couleur, methode=request.method)
 # 3xx : une redirection
 @app.get("/home")
 def home():
