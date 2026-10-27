@@ -89,19 +89,19 @@
 
 1. Que signifie HTTP ? Qui envoie la **requête** et qui envoie la **réponse** ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ HTTP veut dire HyperText Transfer Protocol. Le navigateur envoie la requête et le serveur renvoie la réponse.
 
 2. Combien de requêtes votre page `/presentation` a-t-elle déclenchées ? Lesquelles ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Avec le cache désactivé, l’onglet Réseau affiche 4 requêtes, mais seulement 2 viennent de mon site : presentation (la page HTML, code 200) et style.css (demandé par la ligne 6 du HTML, la balise <link>). Les deux autres (injectScript.js et injectScriptAdjust.js) sont lancées par content.js, c’est-à-dire par une extension de mon navigateur.
 
 3. Que signifie le code `200` ? Et le code `404` de la favicon ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ 200 OK veut dire que la requête a réussi. 404 Not Found veut dire que le fichier demandé n’existe pas sur le serveur. Le navigateur cherche automatiquement une icône d’onglet favicon.ico, mais mon site n’en a pas. En ouvrant /favicon.ico, on obtient bien « Not Found ».
 
 4. Pourquoi les modifications faites dans l'onglet Éléments ne sont-elles pas visibles par les autres visiteurs ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Parce qu’elles modifient seulement la copie de la page chargée dans mon navigateur, sur mon ordinateur. Elles ne changent pas les fichiers sur le serveur. Les autres visiteurs reçoivent toujours la page envoyée par le serveur, et si je recharge la page, mes modifications disparaissent aussi. Pour modifier vraiment le site, il faut changer le code sur GitHub et le redéployer.
 
 ---
 
