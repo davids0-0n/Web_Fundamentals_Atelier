@@ -43,15 +43,17 @@
 
 1. Quelle est la différence entre ce que le serveur **envoie** et ce que le navigateur **affiche** ?
 
-   > _Ma réponse :_ 
-
+   > _Ma réponse :_ Le serveur envoie seulement du code et le navigateur interprète ces balises et les transforme en page mise en forme.
 2. À quoi servent les balises `<h1>`, `<p>`, `<ul>` et `<li>` ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ <h1> : le titre principal de la page.
+                    <p> : un paragraphe de texte.
+                    <ul> : une liste à puces, non ordonnée (unordered list).
+                    <li> : un élément de la liste (list item), placé à l’intérieur de <ul>.
 
 3. Pourquoi l'image s'affiche-t-elle alors qu'elle n'est pas sur votre serveur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Parce que la balise <img src="https://..."> contient l’adresse complète de l’image sur un autre serveur. Mon serveur envoie seulement le HTML. En le lisant, le navigateur voit l’adresse de l’image et envoie lui-même une deuxième requête à cet autre serveur pour la télécharger. Une page Web peut donc être fabriquée à partir de plusieurs serveurs différents.
 
 ---
 
