@@ -158,19 +158,19 @@ Défi : Le code 418 « I’m a teapot » (« Je suis une théière ») est une b
 
 1. Citez trois informations que le serveur connaît sur vous, sans que vous ayez rien rempli.
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Mon adresse IP, mon navigateur et mon système d’exploitation.
 
 2. À quoi peut servir l'en-tête `Accept-Language` pour un site comme Wikipédia ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Il indique au serveur dans quelle(s) langue(s) l’utilisateur préfère lire. Wikipédia peut s’en servir pour afficher automatiquement la page dans la bonne langue.
 
 3. Dans l'Access log, retrouvez une requête qui a reçu un code `404`. Quelle page était demandée ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Dans l’Access log, j’ai trouvé la ligne "GET /nimportequoi HTTP/1.1" 404. La page demandée était /nimportequoi, une route qui n’existe pas sur mon site (je l’avais tapée exprès pour tester ma page d’erreur 404). La ligne indique aussi mon adresse IP, la date et l’heure de la visite, la méthode (GET) et mon navigateur (Chrome sous Windows).
 
 4. Après cet exercice, que pensez-vous de la notion de « navigation anonyme » ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ La navigation privée n’est pas vraiment anonyme. Elle n’enregistre rien sur mon ordinateur (pas d’historique, cookies effacés à la fermeture), mais elle ne cache rien au serveur. Celui-ci voit toujours mon adresse IP, mon navigateur, ma langue et les pages que je visite, et il les note dans ses journaux, comme on l’a vu dans l’Access log. Mon log contient même des visites que je n’ai pas faites moi-même (un robot python-requests, Discordbot) : le serveur enregistre tout le monde. Mon fournisseur d’accès ou le réseau de l’école peuvent aussi voir les sites visités. Pour cacher son adresse IP, il faudrait par exemple un VPN, et même là, l’anonymat n’est jamais total.
 
 ---
 
