@@ -35,6 +35,9 @@ def presentation():
 def loisirs():
     return "Mes loisirs sont l'informatique, les jeux vidéos et le sport."
 
+@app.get("/bonjour/<prenom>")
+def bonjour(prenom):
+    return f"<h1>Bonjour {prenom} !</h1>"
 # ---------------------------------------------------------------
 #  Ne pas modifier : utile seulement pour lancer le site
 #  sur votre propre ordinateur (python flask_app.py)
