@@ -103,6 +103,7 @@
 
    > _Ma réponse :_ Parce qu’elles modifient seulement la copie de la page chargée dans mon navigateur, sur mon ordinateur. Elles ne changent pas les fichiers sur le serveur. Les autres visiteurs reçoivent toujours la page envoyée par le serveur, et si je recharge la page, mes modifications disparaissent aussi. Pour modifier vraiment le site, il faut changer le code sur GitHub et le redéployer.
 
+Bonus : Pour presentation, le Content-Type vaut text/html; charset=utf-8. Pour style.css, il vaut text/css; charset=utf-8. Cet en-tête, envoyé par le serveur, indique au navigateur le type de fichier qu’il reçoit, pour qu’il sache comment le traiter : le HTML est affiché comme une page, le CSS est appliqué comme style. Le navigateur se fie à cet en-tête plutôt qu’à l’extension du fichier. La partie charset=utf-8 précise l’encodage des caractères, ce qui permet d’afficher correctement les accents (é, è, à…).
 ---
 
 ## 🟣 Exercice 7 — Envoyer des informations dans l'URL
