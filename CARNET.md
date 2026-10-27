@@ -61,11 +61,11 @@
 
 1. Pourquoi est-ce une bonne idée de séparer le code Python et le HTML ? (Pensez à une équipe avec un développeur et un graphiste.)
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Chacun peut travailler sur sa partie sans gêner l’autre. Le développeur s’occupe du code Python. Le graphiste s’occupe des fichiers HTML dans templates/. Le graphiste n’a pas besoin de connaître Python, et le développeur ne risque pas de casser le design. Le code est aussi plus lisible, et on peut réutiliser le même template pour plusieurs pages en changeant seulement les données.
 
 2. Les `{{ prenom }}` sont-ils remplacés par le serveur ou par le navigateur ? Comment l'avez-vous vérifié ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Ils sont remplacés par le serveur. Je l’ai vérifié en affichant le code source de la page dans le navigateur. On n’y voit plus {{ prenom }}, mais directement la valeur. Le serveur remplace les variables avant d’envoyer le HTML, et le navigateur reçoit une page déjà complète.
 
 ---
 
