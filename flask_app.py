@@ -50,11 +50,15 @@ def formulaire():
     return render_template("formulaire.html")
 
 
-@app.get("/salut")
+@app.route("/salut", methods=["GET", "POST"])
 def salut():
-    prenom = request.args.get("prenom", "inconnu")
-    ville = request.args.get("ville", "nulle part")
-    return f"Bonjour {prenom}, qui vient de {ville} !"
+    if request.method == "POST":
+        prenom = request.form.get("prenom", "inconnu")
+        ville = request.form.get("ville", "nulle part")
+    else:
+        prenom = request.args.get("prenom", "inconnu")
+        ville = request.args.get("ville", "nulle part")
+    return f"Bonjour {prenom}, qui vient de {ville} ! (reçu en {request.method})"
 # ---------------------------------------------------------------
 #  Ne pas modifier : utile seulement pour lancer le site
 #  sur votre propre ordinateur (python flask_app.py)
