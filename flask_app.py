@@ -43,9 +43,28 @@ def bonjour(prenom):
 
 @app.get("/calcul")
 def calcul():
-    a = int(request.args.get("a", 0))
-    b = int(request.args.get("b", 0))
-    return f"{a} + {b} = {a + b}"
+    try:
+        a = int(request.args.get("a", 0))
+        b = int(request.args.get("b", 0))
+    except ValueError:
+        return "Erreur : a et b doivent être des nombres.", 400
+
+    op = request.args.get("op", "plus")
+
+    if op == "plus":
+        resultat = a + b
+    elif op == "moins":
+        resultat = a - b
+    elif op == "fois":
+        resultat = a * b
+    elif op == "divise":
+        if b == 0:
+            return "Erreur : division par zéro impossible.", 400
+        resultat = a / b
+    else:
+        return "Opération inconnue (plus, moins, fois ou divise).", 400
+
+    return f"{a} {op} {b} = {resultat}"
 
 @app.get("/formulaire")
 def formulaire():
